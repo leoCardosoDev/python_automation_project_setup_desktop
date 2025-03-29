@@ -6,3 +6,4 @@ page = requests.get(url, headers=browser)
 
 with open('page.html', 'w', encoding='utf-8') as file:
     file.write(page.text)
+    
