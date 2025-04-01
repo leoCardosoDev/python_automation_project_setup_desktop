@@ -48,3 +48,4 @@ def choose_team(time:str):
     middle_api = '/unique-tournament/{serie}/season/'
     url_25 = base_api + id_team + middle_api + end_point_25 + end_api
     url_list = [url_25]
+    
