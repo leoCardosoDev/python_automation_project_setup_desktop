@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome import ChromeDriverManager
 from lxml import html
-
 from bs4 import BeautifulSoup
 
 teams_address_A = {
@@ -36,7 +35,6 @@ def choose_team(time:str):
     data_list = []
     cont_url_list = 0
     cont_data_list = 0
-
     division = input('Qual divisão você quer? (A ou B): ').strip().lower()
     if division == 'a':
         serie = '325'
