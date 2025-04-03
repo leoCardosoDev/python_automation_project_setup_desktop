@@ -42,8 +42,6 @@ def choose_team(time:str):
         end_point_25 = '72034' 
     elif division == 'b':
         serie = '390'
-    
     middle_api = '/unique-tournament/{serie}/season/'
     url_25 = base_api + id_team + middle_api + end_point_25 + end_api
     url_list = [url_25]
-    
