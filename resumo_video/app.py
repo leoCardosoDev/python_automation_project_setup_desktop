@@ -160,7 +160,6 @@ def transcrever_segmentos(segmentos, max_retries=3, max_file_size_bytes=25*1024*
         progress_text = f"Transcrevendo segmento {idx+1}/{total_segmentos}"
         progress_value = (idx / total_segmentos)
         progress_bar.progress(progress_value, text=progress_text)
-        
         # Verifica o tamanho do arquivo
         file_size = Path(segmento_path).stat().st_size
         if file_size > max_file_size_bytes:
