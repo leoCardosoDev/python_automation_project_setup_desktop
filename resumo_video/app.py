@@ -164,10 +164,8 @@ def transcrever_segmentos(segmentos, max_retries=3, max_file_size_bytes=25*1024*
         file_size = Path(segmento_path).stat().st_size
         if file_size > max_file_size_bytes:
             st.warning(f"Segmento {idx+1} ainda excede o limite de tamanho ({file_size/1024/1024:.2f} MB). Tentando reduzir mais...")
-            
             # Carrega o segmento
             segmento_audio = AudioSegment.from_file(segmento_path)
-            
             # Reduz ainda mais a qualidade
             segmento_audio.export(
                 segmento_path, 
