@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from pydub import AudioSegment
 
-
 # -------------------------
 # CONFIGURAÇÃO E SEGURANÇA
 # -------------------------
@@ -39,7 +38,6 @@ def baixar_video_ytdlp(url, pasta_destino):
     """Baixa apenas o vídeo do YouTube e retorna o caminho e título."""
     try:
         import yt_dlp
-
         ydl_opts = {
             'format': 'best[ext=mp4]/best',  # Prioriza MP4, mas aceita outros formatos se necessário
             'outtmpl': str(Path(pasta_destino) / '%(title)s.%(ext)s'),
